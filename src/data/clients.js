@@ -1,0 +1,16 @@
+export const CLIENTS = [
+    { id: 1, name: "Chevron", logo: "/assets/clients/chevron.jpg" },
+    { id: 2, name: "Civil Defence", logo: "/assets/clients/civil-defence.jpg" },
+    { id: 3, name: "Defence Headquarters", logo: "/assets/clients/defence-headquarters.jpg" },
+    { id: 4, name: "Defence Space Administration", logo: "/assets/clients/defence-space-administration.jpg" },
+    { id: 5, name: "Department Petroleum Resources", logo: "/assets/clients/department-petroleum-resources.jpg" },
+    { id: 6, name: "Federal Fire Service", logo: "/assets/clients/federal-fire-service.jpg" },
+    { id: 7, name: "Imo State Government Fire Service", logo: "/assets/clients/imo-state-government.jpg" },
+    { id: 8, name: "Nigeria Police", logo: "/assets/clients/nigeria-police.jpg" },
+    { id: 9, name: "Nigerian Air Force", logo: "/assets/clients/nigerian-air-force.jpg" },
+    { id: 10, name: "Nigerian Army", logo: "/assets/clients/nigerian-army.jpg" },
+    { id: 11, name: "Nigerian Navy", logo: "/assets/clients/nigerian-navy.jpg" },
+    { id: 12, name: "NNPC", logo: "/assets/clients/nnpc.jpg" },
+    { id: 13, name: "OSHAssociation", logo: "/assets/clients/oshassociation.jpg" },
+    { id: 14, name: "Presidential Air Fleet", logo: "/assets/clients/presidential-air-fleet.jpg" },
+];
