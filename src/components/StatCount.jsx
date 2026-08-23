@@ -27,12 +27,12 @@ export function Counter({ target, isVisible }) {
 }
 
 // 2. Parent Component Example
-export default function StatCountSection({ref,isVisible}) {
+export default function StatCountSection({ref,isVisible,className}) {
     // Correct destructuring for custom hook (ref + boolean state)
     
 
     return (
-        <div ref={ref} className={` w-full flex flex-col items-center font-display uppercase px-16`}>
+        <div ref={ref} className={` w-full flex flex-col items-center font-display uppercase px-16 ${className}`}>
             <div className="relative flex flex-col w-[80%] items-start pb-4 mb-6">
                 <span className="text-navy text-[45px]">
                     <Counter target={37} isVisible />+

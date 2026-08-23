@@ -9,11 +9,11 @@ import "../animations.css"
 import "../index.css"
 
  export default function Footer() {
-    const [footerRef, footerInView] = useInView({ threshold: 0.4 });
+    const [footerRef, footerInView] = useInView({ threshold: 0.1 });
     return (
 
         <footer ref={footerRef}
-            className="w-full md:h-[70%] flex flex-col items-center font-display relative bg-ink border-t-[7px] border-fire text-paper/90 font-display  translate-y-[15px] py-36 px-6 md:px-6 overflow-hidden"
+            className="w-full md:h-[70%] flex flex-col items-center font-display relative bg-ink border-t-[7px] border-fire text-paper/90 font-display  translate-y-[15px] pt-36 px-6 md:px-6 overflow-hidden"
         >
 
             <div className=" w-[90%]  flex flex-col justify-between h-full">
@@ -104,11 +104,11 @@ import "../index.css"
 
                         <ul className="space-y-2.5 text-sm font-display font-normal text-steel">
                             {[
-                                { label: "Corporate Profile", href: "#profile" },
+                                { label: "About Us", href: "/about" },
                                 { label: "Get in Touch", href: "/contact" },
-                                { label: "Service Catalogue", href: "#services" },
-                                { label: "Project Portfolio", href: "#portfolio" },
-                                { label: "Compliance Records", href: "#compliance" },
+                                { label: "Service Catalogue", href: "/#services" },
+                                { label: "Project Portfolio", href: "/portfolio" },
+                                
                             ].map((link, idx) => (
                                 <li key={idx}>
                                     <a
@@ -160,7 +160,7 @@ import "../index.css"
                 </div>
 
                 {/* BOTTOM BAR: COPYRIGHT & TRADEMARK */}
-                <div className="pt-8 border-t bottom-4 border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-steel/60">
+                <div className="py-14 pt-6 border-t bottom-4 border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-steel/60">
                     <p className="text-center sm:text-left">
                         &copy; 2026 AFRODEZT GLOBAL SERVICES LTD. ALL RIGHTS RESERVED.
                     </p>

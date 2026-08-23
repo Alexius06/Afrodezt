@@ -9,7 +9,7 @@ export function FloatingAccent({
 }) {
   return (
     <div
-      className={`absolute opacity-10 pointer-events-none animate-rotateSlow ${size} ${className}`}
+      className={`absolute opacity-30 pointer-events-none animate-rotateSlow ${size} ${className}`}
       style={{
         animationDuration: `${duration}s`,
         animationDelay: `${delay}s`,

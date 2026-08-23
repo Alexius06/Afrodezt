@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import * as Lucide from "lucide-react";
 import * as lucideLab from '@lucide/lab';
 import Navbar from "../components/navbar";
@@ -9,6 +10,8 @@ import StatCountSection from "../components/StatCount";
 import { useInView } from "../hooks/useInView";
 import { CharacterReveal, WordReveal, AnimatedElement, StaggeredContainer } from "../components/AnimationComponents";
 import { FloatingAccent, DrawLine, NeonText } from "../components/DecorativeElements";
+import HazardHover from "../components/hazardHover";
+import Texture from "../components/texture";
 import "../animations.css";
 
 // Counter Component for animated numbers
@@ -81,7 +84,9 @@ export default function LandingPage() {
 
     return (
         <>
-            <main className="">
+            <main className="relative z-10">
+            
+                <Texture className="fixed inset-0 w-full h-full opacity-50 pointer-events-none z-0" />
 
                 <div className="bg-ink min-h-screen text-white relative">
                     {/* 1. NAVBAR: Fixed header sliding down after headline finishes */}
@@ -170,19 +175,25 @@ export default function LandingPage() {
                                 </p>
 
                                 <div className="mt-10 flex flex-wrap gap-4 sm:gap-5">
-                                    <button className="inline-flex h-16 items-center justify-center bg-fire px-6 text-base font-bold uppercase text-white transition-opacity hover:opacity-90 sm:px-8 hover:shadow-lg hover:shadow-fire/50">
-                                        View Portfolio
-                                    </button>
-                                    <button className="inline-flex h-16 items-center justify-center border border-white px-6 text-base font-bold uppercase text-white transition-colors hover:bg-white/10 sm:px-8">
+
+                                        <Link
+                to="/portfolio" className="inline-flex h-16 items-center justify-center hover:bg-white/10 border border-white px-6 text-base font-bold uppercase rounded-sm text-white transition-opacity hover:opacity-90 sm:px-8 ">
+                                            View Portfolio
+                                        </Link>
+                                    <HazardHover>
+                                    <Link
+                to="/contact" className="inline-flex h-16 items-center justify-center bg-fire rounded-sm px-6 text-base font-bold uppercase text-white transition-colors  sm:px-8">
                                         Get in Touch
-                                    </button>
+                                    </Link>
+                                    </HazardHover>
+                                    
                                 </div>
                             </div>
                             <div
                                 className="flex mt-10 items-center origin-left transition-all duration-700"
                                 style={{
                                     transform: headlineFinished ? "scaleX(1)" : "scaleX(0)",
-                                    opacity :headlineFinished ? 1 : 0,
+                                    opacity: headlineFinished ? 1 : 0,
                                 }}
                             >
                                 <div className="h-[2px] w-[250px] bg-fire"></div>
@@ -190,21 +201,21 @@ export default function LandingPage() {
                             </div>
                         </div>
 
-                
-                <img
-                    src="/assets/metal_pattern.png"
-                    className="absolute -left-20 top-8 w-40 opacity-20 object-none sm:w-52 md:w-64 lg:top-32"
-                    alt=""
-                />
-                <img
-                    src="/assets/metal_pattern.png"
-                    className="absolute -right-16 bottom-8 w-40 opacity-20 object-none sm:w-52 md:w-64"
-                    alt=""
-                />
-            </section>
 
-            {/* Styles */}
-            <style>{`
+                        <img
+                            src="/assets/metal_pattern.png"
+                            className="absolute -left-20 top-8 w-40 opacity-20 object-none sm:w-52 md:w-64 lg:top-32"
+                            alt=""
+                        />
+                        <img
+                            src="/assets/metal_pattern.png"
+                            className="absolute -right-16 bottom-8 w-40 opacity-20 object-none sm:w-52 md:w-64"
+                            alt=""
+                        />
+                    </section>
+
+                    {/* Styles */}
+                    <style>{`
                         @keyframes slideInBorder {
                             from { width: 0; }
                             to { width: 100%; }
@@ -214,9 +225,9 @@ export default function LandingPage() {
                             animation: slideInBorder 2s ease-out forwards;
                         }
                     `}</style>
-        </div >
-
-                <section id="services" ref={servicesRef} className="w-full h-full flex flex-row justify-center my-20 relative">
+                </div >
+                <section id="services" ref={servicesRef} className="w-full h-full flex flex-row justify-center py-20 relative">
+                
                     {/* Floating Decorative Elements */}
                     <FloatingAccent className="top-10 left-20 text-fire" size="w-32 h-32" duration={30} />
                     <FloatingAccent className="bottom-20 right-32 text-maroon" size="w-24 h-24" duration={25} delay={5} />
@@ -311,8 +322,8 @@ export default function LandingPage() {
 
                     <ClientStrip speed="40s" />
                 </section>
-                <section id="projects" ref={projectsRef} className="w-full h-full flex flex-col items-center  my-20 relative">
-
+                <section id="projects" ref={projectsRef} className="w-full h-full flex flex-col items-center  py-20 relative">
+                    
                     <div className="w-[80%] flex md:flex-row flex-col md:justify-center items-center px-3 gap-3">
                         <ProjectsSection
                             projectsInView={projectsInView}
@@ -320,7 +331,8 @@ export default function LandingPage() {
                         />
                     </div>
                 </section>
-                <section id="partners" ref={partnersRef} className={`uppercase w-full h-full flex flex-col items-center ${partnersInView ? "animate-fadeInUp" : "opacity-0"} my-20 relative`}>
+                <section id="partners" ref={partnersRef} className={`uppercase w-full h-full flex flex-col items-center ${partnersInView ? "animate-fadeInUp" : "opacity-0"} py-20 relative`}>
+                    
                     <div className=" mb-10 ">
 
                         <p className="text-steel text-sm font-mono font-light text-center mb-6">Institutional Verification</p>
@@ -329,7 +341,7 @@ export default function LandingPage() {
                     </div>
 
 
-                    <div className="md:w-[60%] h-contain border-t border-steel flex flex-row justify-center rounded-lg pt-4 transition-all duration-700 ">
+                    <div className="md:w-[60%] h-contain border-t-2 border-steel flex flex-row justify-center pt-4 transition-all duration-700 ">
 
                         <div className="w-1/3 scale-90 hover:scale-110 flex flex-col items-center transition-all duration-700 "> <img src="/assets/partners/firex.jpg" className="w-50 h-50" alt="" /></div>
                         <div className="w-1/3 scale-110 hover:scale-120 flex flex-col items-center transition-all duration-700 "> <img src="/assets/partners/volkan.jpg" className="w-50 h-50" alt="" /></div>
@@ -337,7 +349,14 @@ export default function LandingPage() {
                     </div>
 
                 </section>
-                <section id="mission" ref={missionRef} className={`uppercase font-display font-bold w-full h-full flex flex-col items-center justify-center skew-y-1 mt-20 relative bg-maroon text-paper/90 text-4xl py-20`}>
+                <section id="mission" ref={missionRef} className={`uppercase font-display font-bold w-full h-full flex flex-col items-center justify-center skew-y-1 pt-20 relative bg-maroon text-paper/90 text-4xl py-20`}>
+                    <div
+                        className="absolute inset-0 opacity-100 pointer-events-none"
+                        style={{
+                            backgroundImage: `radial-gradient(rgba(208, 10, 10, 0.4) 1.5px, transparent 1.5px)`,
+                            backgroundSize: "24px 24px",
+                        }}
+                    />
                     <div
                         className={`absolute top-9 left-30 w-[20%] h-[20%]  bg-paper z-40 ${missionInView ? "animate-fadeInUp" : "opacity-0"}`}
                         style={{
@@ -361,6 +380,7 @@ export default function LandingPage() {
                         </h1>
                     </div>
                 </section>
+                
 
                 <Footer />
 
