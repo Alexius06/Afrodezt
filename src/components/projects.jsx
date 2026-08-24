@@ -44,7 +44,10 @@ export default function ProjectsSection({ projectsInView, projectsRef }) {
                 {/* Header Row */}
                 <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
                     <div className={`uppercase flex-start ${projectsInView ? "animate-fadeInLeft" : "translate-x-full invisible"}`}>
-                        <p className="text-fire font-display font-bold  text-xs ml-[-1] mb-3">Operational Excellence</p>
+                        <div className="flex items-center ml-1 mb-3 justify-center gap-3">
+                            <span className="h-[2px] w-8 bg-fire inline-block" />
+                            <p className="text-maroon text-xs font-mono font-light ">// Operational Excellence</p>
+                        </div>
                         <h1 className="text-navy font-display tracking-[-4px] text-6xl font-bold">Projects</h1>
                     </div>
 

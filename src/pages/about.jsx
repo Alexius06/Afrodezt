@@ -28,7 +28,7 @@ export default function About() {
       {/* Main Page Container */}
       <main className="relative min-h-screen w-full bg-paper overflow-hidden">
         {/* Global Fixed Texture Overlay */}
-        <Texture className="fixed inset-0 w-full h-full opacity-40 pointer-events-none z-0" />
+        <Texture className="fixed inset-0 w-full h-full opacity-35 pointer-events-none z-0" />
 
         {/* Bento Grid Hero */}
         <div className="relative z-10 pt-24 mt-4">

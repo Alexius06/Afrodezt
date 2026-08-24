@@ -84,19 +84,19 @@ export default function LandingPage() {
 
     return (
         <>
-            <main className="relative z-10">
-            
-                <Texture className="fixed inset-0 w-full h-full opacity-50 pointer-events-none z-0" />
+            <main className="relative z-10 bg-paper">
+                <div
+                    className={`fixed top-0 left-0 right-0 z-50 ${headlineFinished ? "animate-slideDown" : "-translate-y-full invisible"
+                        }`}
+
+                >
+                    <Navbar />
+                </div>
+
+                <Texture className="fixed inset-0 w-full h-full opacity-35 pointer-events-none z-0" />
 
                 <div className="bg-ink min-h-screen text-white relative">
                     {/* 1. NAVBAR: Fixed header sliding down after headline finishes */}
-                    <div
-                        className={`fixed top-0 left-0 right-0 z-50 ${headlineFinished ? "animate-slideDown" : "-translate-y-full invisible"
-                            }`}
-
-                    >
-                        <Navbar />
-                    </div>
                     {/* 2. HERO SECTION */}
                     <section id="hero-section" className="h-screen overflow-hidden relative bg-ink">
 
@@ -176,17 +176,17 @@ export default function LandingPage() {
 
                                 <div className="mt-10 flex flex-wrap gap-4 sm:gap-5">
 
-                                        <Link
-                to="/portfolio" className="inline-flex h-16 items-center justify-center hover:bg-white/10 border border-white px-6 text-base font-bold uppercase rounded-sm text-white transition-opacity hover:opacity-90 sm:px-8 ">
-                                            View Portfolio
-                                        </Link>
-                                    <HazardHover>
                                     <Link
-                to="/contact" className="inline-flex h-16 items-center justify-center bg-fire rounded-sm px-6 text-base font-bold uppercase text-white transition-colors  sm:px-8">
-                                        Get in Touch
+                                        to="/portfolio" className="inline-flex h-16 items-center justify-center hover:bg-white/10 border border-white px-6 text-base font-bold uppercase rounded-sm text-white transition-opacity hover:opacity-90 sm:px-8 ">
+                                        View Portfolio
                                     </Link>
+                                    <HazardHover>
+                                        <Link
+                                            to="/contact" className="inline-flex h-16 items-center justify-center bg-fire rounded-sm px-6 text-base font-bold uppercase text-white transition-colors  sm:px-8">
+                                            Get in Touch
+                                        </Link>
                                     </HazardHover>
-                                    
+
                                 </div>
                             </div>
                             <div
@@ -227,7 +227,7 @@ export default function LandingPage() {
                     `}</style>
                 </div >
                 <section id="services" ref={servicesRef} className="w-full h-full flex flex-row justify-center py-20 relative">
-                
+
                     {/* Floating Decorative Elements */}
                     <FloatingAccent className="top-10 left-20 text-fire" size="w-32 h-32" duration={30} />
                     <FloatingAccent className="bottom-20 right-32 text-maroon" size="w-24 h-24" duration={25} delay={5} />
@@ -323,7 +323,7 @@ export default function LandingPage() {
                     <ClientStrip speed="40s" />
                 </section>
                 <section id="projects" ref={projectsRef} className="w-full h-full flex flex-col items-center  py-20 relative">
-                    
+
                     <div className="w-[80%] flex md:flex-row flex-col md:justify-center items-center px-3 gap-3">
                         <ProjectsSection
                             projectsInView={projectsInView}
@@ -332,16 +332,18 @@ export default function LandingPage() {
                     </div>
                 </section>
                 <section id="partners" ref={partnersRef} className={`uppercase w-full h-full flex flex-col items-center ${partnersInView ? "animate-fadeInUp" : "opacity-0"} py-20 relative`}>
-                    
-                    <div className=" mb-10 ">
 
-                        <p className="text-steel text-sm font-mono font-light text-center mb-6">Institutional Verification</p>
+                    <div className=" mb-10 w-[76%] flex flex-col items-start px-3">
+                        <div className="flex items-center justify-center gap-3 mb-3">
+                            <span className="h-[2px] w-8 bg-fire inline-block" />
+                            <p className="text-maroon text-xs font-mono font-light text-center ">// Institutional Verification</p>
+                        </div>
                         <h1 className="text-navy text-4xl tracking-[-2px] font-display font-bold text-center">Authorized Partners</h1>
 
                     </div>
 
 
-                    <div className="md:w-[60%] h-contain border-t-2 border-steel flex flex-row justify-center pt-4 transition-all duration-700 ">
+                    <div className="md:w-[60%] h-contain border-t-2 border-steel/50 flex flex-row justify-center pt-4 transition-all duration-700 ">
 
                         <div className="w-1/3 scale-90 hover:scale-110 flex flex-col items-center transition-all duration-700 "> <img src="/assets/partners/firex.jpg" className="w-50 h-50" alt="" /></div>
                         <div className="w-1/3 scale-110 hover:scale-120 flex flex-col items-center transition-all duration-700 "> <img src="/assets/partners/volkan.jpg" className="w-50 h-50" alt="" /></div>
@@ -380,7 +382,7 @@ export default function LandingPage() {
                         </h1>
                     </div>
                 </section>
-                
+
 
                 <Footer />
 

@@ -3,9 +3,9 @@
 export const PROJECT_CATEGORIES = [
   "ALL",
   "MARITIME & NAVAL",
-  "FIRE TENDERS",
-  "TECHNICAL",
-  "NAVIGATION",
+  "FIRE TRUCKS",
+  "WORKSHOP",
+  "TRAINING",
 ];
 
 export const PROJECTS_DATA = [

@@ -3,7 +3,7 @@ import * as Lucide from "lucide-react";
 
 export default function Flagship() {
   return (
-    <section className="bg-ink/50 text-white py-16 px-6 md:px-12 relative overflow-hidden font-body selection:bg-fire selection:text-white">
+    <section className="bg-steel/50 text-white py-16 px-6 md:px-12 relative overflow-hidden font-body selection:bg-fire selection:text-white">
       {/* Decorative Hazard Stripes Overlay on Far Left */}
       <div
         className="absolute inset-y-0 left-0 w-16 sm:w-24 md:w-32 opacity-10 pointer-events-none z-0"
@@ -19,8 +19,8 @@ export default function Flagship() {
           {/* Eyebrow Header */}
           <div className="flex items-center gap-3">
             <span className="h-[2px] w-6 bg-fire inline-block" />
-            <span className="font-mono text-xs text-fire font-bold tracking-widest uppercase">
-              FLAGSHIP ENGAGEMENT
+            <span className="font-mono text-xs text-maroon font-bold tracking-widest uppercase">
+              // FLAGSHIP ENGAGEMENT
             </span>
           </div>
 
@@ -32,7 +32,7 @@ export default function Flagship() {
           </h2>
 
           {/* Description */}
-          <p className="text-steel font-body text-sm md:text-base leading-relaxed max-w-xl font-light">
+          <p className="text-maroon font-body text-sm md:text-base leading-relaxed max-w-xl font-light">
             Our most comprehensive naval engineering initiative to date. A 36-month
             strategic engagement focusing on the structural integrity and weaponry
             systems modernization of Nigeria's primary patrol fleet.
@@ -62,16 +62,7 @@ export default function Flagship() {
             </div>
           </div>
 
-          {/* CTA Link */}
-          <div className="pt-4">
-            <a
-              href="#case-study"
-              className="inline-flex items-center gap-3 text-fire hover:text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors duration-200 group"
-            >
-              <span>READ MISSION CASE STUDY</span>
-              <Lucide.ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
+          
         </div>
 
         {/* RIGHT COLUMN: FEATURED ASSET IMAGE FRAME */}
@@ -93,7 +84,7 @@ export default function Flagship() {
               }}
             >
               <img
-                src="/assets/landing_page.jpg"
+                src="/assets/projects/vema-f-series.jpg"
                 alt="NNS Thunder (F90) Naval Vessel"
                 className="w-full h-full object-cover opacity-90 transition-transform duration-700 hover:scale-105"
               />
@@ -103,8 +94,8 @@ export default function Flagship() {
                 <span className="font-mono text-[10px] uppercase font-bold text-white/80 tracking-widest block mb-1">
                   ENGAGED ASSET:
                 </span>
-                <span className="font-display text-2xl md:text-3xl uppercase font-bold text-white tracking-wide block leading-none">
-                  NNS THUNDER (F90)
+                <span className="font-display text-2xl md:text-3xl uppercase font-bold text-white tracking-wide block leading-none uppercase">
+                  VEMA SKYLIFT (F-SERIES)
                 </span>
               </div>
             </div>

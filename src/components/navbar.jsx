@@ -103,19 +103,16 @@ export default function Navbar({
               className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 z-50 focus:outline-none"
             >
               <span
-                className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ease-in-out ${
-                  isOpen ? "rotate-45 translate-y-2 bg-fire" : ""
-                }`}
+                className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ease-in-out ${isOpen ? "rotate-45 translate-y-2 bg-fire" : ""
+                  }`}
               />
               <span
-                className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ease-in-out ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
+                className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ease-in-out ${isOpen ? "opacity-0" : "opacity-100"
+                  }`}
               />
               <span
-                className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ease-in-out ${
-                  isOpen ? "-rotate-45 -translate-y-2 bg-fire" : ""
-                }`}
+                className={`w-6 h-0.5 bg-white rounded-full transition-all duration-300 ease-in-out ${isOpen ? "-rotate-45 -translate-y-2 bg-fire" : ""
+                  }`}
               />
             </button>
           </>
@@ -125,11 +122,10 @@ export default function Navbar({
       {/* Mobile Menu Dropdown Overlay (Standard mode only) */}
       {!isContextual && (
         <div
-          className={`fixed top-0 left-0 w-full h-[75vh] bg-ink/95 backdrop-blur-2xl border-b border-white/10 flex flex-col items-center justify-center pointer-events-auto transition-all duration-500 ease-in-out z-40 ${
-            isOpen
+          className={`fixed top-0 left-0 w-full h-[75vh] bg-ink/95 backdrop-blur-2xl border-b border-white/10 flex flex-col items-center justify-center pointer-events-auto transition-all duration-500 ease-in-out z-40 ${isOpen
               ? "translate-y-0 opacity-100"
               : "-translate-y-full opacity-0 pointer-events-none"
-          }`}
+            }`}
         >
           <ul className="flex flex-col items-center gap-8 mb-8">
             {NAV_LINKS.map((link) => (
@@ -145,13 +141,15 @@ export default function Navbar({
             ))}
           </ul>
 
-          <Link
-            to="/contact"
-            onClick={closeMenu}
-            className="font-display rounded-sm bg-gradient-to-r from-fire to-ember px-8 py-3 text-sm font-bold uppercase text-white shadow-lg hover:shadow-fire/50 transition-all duration-300"
-          >
-            Get in Touch
-          </Link>
+          <HazardHover>
+            <Link
+              to="/contact"
+              onClick={closeMenu}
+              className="font-display rounded-sm bg-gradient-to-r from-fire to-ember px-8 py-3 text-sm font-bold uppercase text-white transition-all duration-300"
+            >
+              Get in Touch
+            </Link>
+          </HazardHover>
         </div>
       )}
     </header>

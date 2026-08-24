@@ -98,17 +98,17 @@ export default function ProjectDetails({ project }) {
     const currentHeroImage = selectedImage || data.heroImage || data.image;
 
     return (
-        <div className="min-h-screen bg-[#F4F4F2] text-ink font-body flex flex-col justify-between selection:bg-fire selection:text-white">
+        <main className="min-h-screen bg-paper text-ink font-body flex flex-col justify-between selection:bg-fire selection:text-white">
             <Navbar
                 backTo="/portfolio"
                 backLabel="BACK TO ARCHIVES"
                 refCode={data.ref}
             />
 
-            <main className="pt-20 md:pt-24 flex-grow relative z-10">
+            <div className="pt-20 md:pt-24 flex-grow relative z-10">
 
 
-                <Texture className="fixed inset-0 w-full h-full opacity-20 pointer-events-none z-0" />
+                <Texture className="fixed inset-0 w-full h-full opacity-35 pointer-events-none z-0" />
 
 
                 <div className="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-14">
@@ -116,10 +116,10 @@ export default function ProjectDetails({ project }) {
                     <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
                         <div>
                             <div className="flex items-center gap-3 mb-2">
-                                <span className="font-display text-xs font-bold text-fire uppercase tracking-widest">
-                                    {data.category}
-                                </span>
                                 <span className="h-[2px] w-8 bg-fire inline-block" />
+                                <span className="font-display text-xs font-bold text-maroon uppercase tracking-widest">
+                                    // {data.category}
+                                </span>
                             </div>
 
                             <h1 className="font-display font-bold text-4xl md:text-6xl text-navy uppercase tracking-tight leading-none">
@@ -181,7 +181,7 @@ export default function ProjectDetails({ project }) {
                                     clipPath:
                                         "polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%)",
                                 }}
-                                className="bg-ink text-white p-6 md:p-8 border border-navy/20 flex-grow shadow-md"
+                                className="bg-maroon text-white p-6 md:p-8 border border-navy/20 flex-grow shadow-md"
                             >
                                 <h3 className="font-display font-bold text-lg uppercase border-b border-white/15 pb-3 mb-6 tracking-wider">
                                     MISSION SPECS
@@ -249,7 +249,7 @@ export default function ProjectDetails({ project }) {
                     {data.evidenceLogs && data.evidenceLogs.length > 0 && (
                         <div className="mb-16">
                             <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-navy/15 pb-3 mb-6 gap-2">
-                                <h2 className="font-display font-bold text-2xl text-ink uppercase tracking-tight">
+                                <h2 className="font-display font-bold text-2xl text-navy uppercase tracking-tight">
                                     VISUAL EVIDENCE LOGS
                                 </h2>
                                 <div className="flex items-center gap-2 font-mono text-xs text-steel uppercase tracking-widest">
@@ -333,7 +333,7 @@ export default function ProjectDetails({ project }) {
                     {/* Overview & Outcomes */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
                         <div>
-                            <h2 className="font-display font-bold text-2xl text-ink uppercase tracking-tight mb-6">
+                            <h2 className="font-display font-bold text-2xl text-navy uppercase tracking-tight mb-6">
                                 MISSION OVERVIEW
                             </h2>
                             <div className="space-y-4 font-body text-steel text-sm md:text-base leading-relaxed">
@@ -346,7 +346,7 @@ export default function ProjectDetails({ project }) {
                         </div>
 
                         <div>
-                            <h2 className="font-display font-bold text-2xl text-ink uppercase tracking-tight mb-6">
+                            <h2 className="font-display font-bold text-2xl text-navy uppercase tracking-tight mb-6">
                                 STRATEGIC OUTCOMES
                             </h2>
                             <div className="space-y-4">
@@ -361,7 +361,7 @@ export default function ProjectDetails({ project }) {
                                                 <IconComponent className="w-5 h-5 text-fire" />
                                             </div>
                                             <div>
-                                                <h3 className="font-display font-bold text-sm text-ink uppercase tracking-wider mb-1">
+                                                <h3 className="font-display font-bold text-sm text-navy uppercase tracking-wider mb-1">
                                                     {outcome.title}
                                                 </h3>
                                                 <p className="font-body text-xs md:text-sm text-steel leading-relaxed">
@@ -375,9 +375,9 @@ export default function ProjectDetails({ project }) {
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
 
             <Footer />
-        </div>
+        </main>
     );
 }

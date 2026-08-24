@@ -10,7 +10,7 @@ export default function Contact() {
             <Navbar />
 
             <main className="flex flex-col flex-grow pt-28 w-full relative bg-paper z-10">
-                <Texture className="fixed inset-0 w-full h-full opacity-30 pointer-events-none z-0" />
+                <Texture className="fixed inset-0 w-full h-full opacity-35 pointer-events-none z-0" />
 
 
 
@@ -20,9 +20,12 @@ export default function Contact() {
 
                     {/* Foreground Content */}
                     <div className="relative z-10 max-w-4xl space-y-4 mb-10">
-                        <span className="font-mono text-xs text-maroon uppercase tracking-widest font-bold">
+                        <div className="flex items-center gap-3">
+                            <span className="h-[2px] w-6 bg-fire inline-block" />
+                            <span className="font-mono text-xs text-maroon uppercase tracking-widest font-bold">
                             // Direct Emergency & Inquiries
-                        </span>
+                            </span>
+                        </div>
                         <h1 className="font-display text-4xl md:text-6xl font-bold text-navy uppercase tracking-tight leading-none">
                             Initiate Direct Contact
                         </h1>
@@ -40,11 +43,12 @@ export default function Contact() {
                             >
                                 <Lucide.PhoneCall className="w-5 h-5" />
                                 <span>CALL 0805 544 9002</span>
+
                             </a>
                         </HazardHover>
 
                         <a
-                            href="mailto:info@afrodezt.com"
+                            href="mailto:afrodezt1@yahoo.com"
                             className="group relative overflow-hidden inline-flex items-center justify-center gap-3 border-2 border-navy text-navy font-display font-bold text-base md:text-lg uppercase tracking-wider px-8 py-4 rounded transition-all duration-300 shadow-sm hover:shadow-md"
                         >
                             <span className="absolute inset-0 h-full w-full bg-navy -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0" />
@@ -88,14 +92,17 @@ export default function Contact() {
 
                     <div className="relative z-10 max-w-7xl mx-auto w-full">
                         <div className="mb-8 border-b border-navy/10 pb-4">
-                            <span className="font-mono text-xs text-maroon font-bold uppercase tracking-widest">
+                            <div className="flex items-center gap-3">
+                                <span className="h-[2px] w-6 bg-fire inline-block" />
+                                <span className="font-mono text-xs text-maroon font-bold uppercase tracking-widest">
                                 // Regional Command Hubs
-                            </span>
+                                </span>
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Card 1: Abuja HQ */}
-                            <div className="bg-white border border-navy/10 rounded-xl p-8 flex flex-col justify-between shadow-sm hover:border-maroon/50 hover:shadow-md transition-all duration-300">
+                            <div className="bg-white border border-navy/10 rounded-sm p-8 flex flex-col justify-between shadow-sm hover:border-maroon/50 hover:shadow-md transition-all duration-300">
                                 <div className="space-y-6">
                                     <div className="flex items-center justify-between border-b border-navy/10 pb-4">
                                         <div>
@@ -114,7 +121,13 @@ export default function Contact() {
                                             <Lucide.MapPin className="w-5 h-5 text-maroon shrink-0 mt-0.5" />
                                             <div>
                                                 <p className="font-semibold text-navy">Address:</p>
-                                                <p className="text-steel">Plot 1042, Central Business District, Abuja, FCT, Nigeria</p>
+                                                <p className="text-steel">Plot 1162, CAD Zone B18, Mazi Emmanuel Olugbuo Close</p>
+                                                <p className="text-steel">Sector Center D, Gudu</p>
+                                                <p className="text-steel">Abuja 920001, Federal Capital Territory</p>
+
+
+
+
                                             </div>
                                         </div>
 
@@ -141,7 +154,7 @@ export default function Contact() {
                             </div>
 
                             {/* Card 2: Port Harcourt */}
-                            <div className="bg-white border border-navy/10 rounded-xl p-8 flex flex-col justify-between shadow-sm hover:border-maroon/50 hover:shadow-md transition-all duration-300">
+                            <div className="bg-white border border-navy/10 rounded-sm p-8 flex flex-col justify-between shadow-sm hover:border-maroon/50 hover:shadow-md transition-all duration-300">
                                 <div className="space-y-6">
                                     <div className="flex items-center justify-between border-b border-navy/10 pb-4">
                                         <div>
@@ -160,7 +173,9 @@ export default function Contact() {
                                             <Lucide.MapPin className="w-5 h-5 text-maroon shrink-0 mt-0.5" />
                                             <div>
                                                 <p className="font-semibold text-navy">Address:</p>
-                                                <p className="text-steel">Trans-Amadi Industrial Layout, Port Harcourt, Rivers State, Nigeria</p>
+                                                <p className="text-steel">Reclamation Road
+                                                    Port Harcourt, Rivers State,
+                                                    Nigeria</p>
                                             </div>
                                         </div>
 
@@ -208,7 +223,7 @@ export default function Contact() {
                         />
 
                         {/* Map Overlay Badge */}
-                        <div className="absolute bottom-6 left-6 bg-navy text-paper p-4 rounded-xl shadow-2xl border border-white/10 hidden sm:block max-w-xs font-mono text-xs z-10">
+                        <div className="absolute bottom-6 left-6 bg-navy text-paper p-4 rounded-sm shadow-2xl border border-white/10 hidden sm:block max-w-xs font-mono text-xs z-10">
                             <p className="text-maroon font-bold uppercase mb-1">// EMBEDDED GOOGLE MAP — ABUJA HQ</p>
                             <p className="text-paper/80">Co-ordinates: 8.9928° N, 7.4694° E</p>
                         </div>

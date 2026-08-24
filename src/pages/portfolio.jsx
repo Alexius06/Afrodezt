@@ -49,7 +49,7 @@ export default function MissionLog() {
       {/* Full Page Relative Wrapper */}
       <main className="relative min-h-screen w-full bg-paper overflow-hidden">
         {/* Global Fixed Texture Overlay */}
-        <Texture className="fixed inset-0 w-full h-full opacity-20 pointer-events-none z-0" />
+        <Texture className="fixed inset-0 w-full h-full opacity-35 pointer-events-none z-0" />
 
         {/* Hero Section */}
         <section className="relative z-10 overflow-hidden w-full max-w-7xl mx-auto pt-28">
@@ -67,7 +67,7 @@ export default function MissionLog() {
               Operational <span className="bg-gradient-to-r from-fire to-ember bg-clip-text text-transparent">Portfolio</span>
             </h1>
 
-            <p className="font-body font-light text-steel text-base md:text-xl max-w-3xl leading-relaxed mt-2">
+            <p className="font-sans font-light text-steel text-base md:text-xl max-w-3xl leading-relaxed mt-2">
               Three decades of executed defense, maritime, and high-stakes fire suppression contracts across Nigeria's most critical operational domains.
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function MissionLog() {
         </div>
 
         {/* Mission Log Grid Section */}
-        <section ref={projectsref} className="relative z-10 min-h-screen text-ink py-16 px-4 md:px-10 font-body selection:bg-fire selection:text-white">
+        <section ref={projectsref} className="relative z-10 min-h-screen text-ink py-16 px-4 md:px-10 font-sans selection:bg-fire selection:text-white">
           <div className="max-w-7xl mx-auto space-y-10">
 
             {/* HEADER & SECONDARY TACTICAL TAB BAR */}
