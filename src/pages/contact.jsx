@@ -15,7 +15,7 @@ export default function Contact() {
 
 
                 {/* 1. INTRO + CTAS SECTION */}
-                <section className="relative max-w-7xl mx-auto pb-20  w-full pt-4 rounded-2xl">
+                <section className="relative max-w-7xl mx-auto pb-20  w-full pt-4 rounded-2xl md:px-0 px-5">
                     <div className="absolute inset-0  pointer-events-none z-0" />
 
                     {/* Foreground Content */}

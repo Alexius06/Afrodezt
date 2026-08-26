@@ -52,18 +52,18 @@ export default function MissionLog() {
         <Texture className="fixed inset-0 w-full h-full opacity-35 pointer-events-none z-0" />
 
         {/* Hero Section */}
-        <section className="relative z-10 overflow-hidden w-full max-w-7xl mx-auto pt-28">
+        <section className="relative z-10 overflow-hidden w-full max-w-7xl mx-auto pt-28 md:px-0 px-6">
           <FloatingAccent className="top-4 right-10 text-fire" size="w-28 h-28" duration={28} />
 
           <div className="relative z-10 flex flex-col items-start gap-4 mb-10">
             <div className="flex items-center gap-3">
               <span className="h-[2px] w-8 bg-fire inline-block" />
               <span className="font-mono text-xs text-maroon font-bold uppercase tracking-widest">
-                // Executed Tenders & Engineering Dossiers
+                // Engineering Dossiers
               </span>
             </div>
 
-            <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl text-navy uppercase leading-none tracking-[-3px]">
+            <h1 className="font-display font-bold text-4xl md:text-7xl lg:text-8xl text-navy uppercase leading-none md:tracking-[-3px] tracking-[-2px]">
               Operational <span className="bg-gradient-to-r from-fire to-ember bg-clip-text text-transparent">Portfolio</span>
             </h1>
 
@@ -139,6 +139,7 @@ export default function MissionLog() {
               {filteredLogs.map((item, index) => (
                 <Link
                   key={item.id}
+                  id={item.id}
                   to={`/portfolio/${item.id}`}
                   style={{
                     animationDelay: `${index * 120}ms`,

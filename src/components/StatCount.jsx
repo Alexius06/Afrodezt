@@ -4,6 +4,7 @@ import { useInView } from "../hooks/useInView";
 // 1. Counter Component
 export function Counter({ target, isVisible }) {
     const [count, setCount] = useState(0);
+    
 
     useEffect(() => {
         if (!isVisible) return;
@@ -32,10 +33,10 @@ export default function StatCountSection({ref,isVisible,className}) {
     
 
     return (
-        <div ref={ref} className={` w-full flex flex-col items-center font-display uppercase px-16 ${className}`}>
+        <div ref={ref} className={` w-full flex flex-col items-center font-display uppercase md:px-16 ${className}`}>
             <div className="relative flex flex-col w-[80%] items-start pb-4 mb-6">
                 <span className="text-navy text-[45px]">
-                    <Counter target={37} isVisible />+
+                    <Counter target={37} isVisible={isVisible} />+
                 </span>
                 <p className="text-xl text-steel">Years Active</p>
                 <div
@@ -50,7 +51,7 @@ export default function StatCountSection({ref,isVisible,className}) {
             {/* Established */}
             <div className="relative flex flex-col w-[80%] items-start pb-4 mb-6">
                 <span className="text-navy text-[45px]">
-                    <Counter target={1989} isVisible />
+                    <Counter target={1989} isVisible={isVisible} />
                 </span>
                 <p className="text-xl text-steel">Established</p>
                 <div
@@ -67,7 +68,7 @@ export default function StatCountSection({ref,isVisible,className}) {
             {/* RC Number */}
             <div className="relative flex flex-col w-[80%] items-start pb-4 mb-6">
                 <span className="text-navy text-[45px]">
-                    <Counter target={129394} isVisible />
+                    <Counter target={129394} isVisible={isVisible} />
                 </span>
                 <p className="text-xl text-steel">RC Number</p>
                 <div
@@ -84,7 +85,7 @@ export default function StatCountSection({ref,isVisible,className}) {
             {/* Strategic Projects */}
             <div className="relative flex flex-col w-[80%] items-start pb-4 mb-6">
                 <span className="text-navy text-[45px]">
-                    <Counter target={227} isVisible />
+                    <Counter target={227} isVisible={isVisible} />
                 </span>
                 <p className="text-xl text-steel">Strategic Projects</p>
                 <div

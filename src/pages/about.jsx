@@ -125,7 +125,7 @@ export default function About() {
               }`}
             >
               <img
-                src="/assets/hq-2.jpg"
+                src="https://thumbs.dreamstime.com/b/default-placeholder-businessman-half-length-portr-portrait-photo-avatar-man-gray-color-113622427.jpg"
                 className="hover:scale-110 duration-700 transition-all"
                 alt="Founder HQ"
               />

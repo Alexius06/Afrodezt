@@ -1,6 +1,6 @@
 import React from "react";
 import * as Lucide from "lucide-react";
-
+import flagshipData from "../data/flagship.json";
 export default function Flagship() {
   return (
     <section className="bg-steel/50 text-white py-16 px-6 md:px-12 relative overflow-hidden font-body selection:bg-fire selection:text-white">
@@ -20,49 +20,41 @@ export default function Flagship() {
           <div className="flex items-center gap-3">
             <span className="h-[2px] w-6 bg-fire inline-block" />
             <span className="font-mono text-xs text-maroon font-bold tracking-widest uppercase">
-              // FLAGSHIP ENGAGEMENT
+              {flagshipData.eyebrow}
             </span>
           </div>
 
           {/* Title with Red Accent Highlight */}
-          <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl uppercase tracking-[-2px] leading-tight text-white">
-            PROJECT <span className="text-fire inline-block">VANGUARD</span>:
+          <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-[-2px] leading-tight text-white break-words">
+            {flagshipData.titlePrefix}{" "}
+            <span className="text-fire inline-block">
+              {flagshipData.titleHighlight}
+            </span>
             <br />
-            NAVAL FLEET REVITALIZATION
+            {flagshipData.titleSuffix}
           </h2>
 
           {/* Description */}
-          <p className="text-maroon font-body text-sm md:text-base leading-relaxed max-w-xl font-light">
-            Our most comprehensive naval engineering initiative to date. A 36-month
-            strategic engagement focusing on the structural integrity and weaponry
-            systems modernization of Nigeria's primary patrol fleet.
+          <p className="text-steel font-body text-sm md:text-base leading-relaxed max-w-xl font-light">
+            {flagshipData.description}
           </p>
 
           {/* Divider */}
           <div className="border-t border-white/10 w-full pt-6" />
 
           {/* Metric Indicators */}
-          <div className="grid grid-cols-2 gap-8">
-            <div className="space-y-1">
-              <div className="font-display font-bold text-3xl md:text-4xl text-white uppercase tracking-tight">
-                14 VESSELS
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-xl">
+            {flagshipData.metrics.map((metric, idx) => (
+              <div key={idx} className="space-y-1">
+                <div className="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-white uppercase tracking-tight">
+                  {metric.value}
+                </div>
+                <div className="font-mono text-[10px] text-steel font-bold tracking-widest uppercase">
+                  {metric.label}
+                </div>
               </div>
-              <div className="font-mono text-[10px] text-steel font-bold tracking-widest uppercase">
-                SERVICE SCOPE
-              </div>
-            </div>
-
-            <div className="space-y-1">
-              <div className="font-display font-bold text-3xl md:text-4xl text-white uppercase tracking-tight">
-                100% READY
-              </div>
-              <div className="font-mono text-[10px] text-steel font-bold tracking-widest uppercase">
-                COMBAT READINESS
-              </div>
-            </div>
+            ))}
           </div>
-
-          
         </div>
 
         {/* RIGHT COLUMN: FEATURED ASSET IMAGE FRAME */}

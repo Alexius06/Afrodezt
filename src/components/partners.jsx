@@ -1,7 +1,7 @@
 import React from "react";
 import Texture from "./texture";
 
-const PARTNERS_DATA = [
+export const PARTNERS_DATA = [
   {
     id: "firex",
     name: "FIREX",
