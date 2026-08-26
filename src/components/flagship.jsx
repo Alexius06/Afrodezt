@@ -76,8 +76,9 @@ export default function Flagship() {
               }}
             >
               <img
-                src="/assets/projects/vema-f-series.jpg"
-                alt="NNS Thunder (F90) Naval Vessel"
+              
+                src="/assets/projects/vema-f-series/af-vfs-01.jpg"
+                alt="VEMA SKYLIFT (F-SERIES)"
                 className="w-full h-full object-cover opacity-90 transition-transform duration-700 hover:scale-105"
               />
 
